@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyScript Example</title>
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css">
+</head>
+
+<body>
+    <h1>Welcome to PyScript!</h1>
+    <p>This is a simple example of using Python with PyScript in HTML.</p>
+
+    <h2>Python Output</h2>
+    <div id="output"></div>
+
+    <py-script>
+        # Python code starts here
+        name = "PyScript User"
+        greeting = f"Hello, {name}!"
+
+        # Perform a simple calculation
+        result = 5 * 3
+
+        # Update the HTML content with the output
+        from js import document
+        document.getElementById("output").innerHTML = f"{greeting} The result of 5 * 3 is {result}."
+    </py-script>
+</body>
+
+</html>
